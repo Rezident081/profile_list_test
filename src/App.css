@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+.list, .user-page-inner{
+  box-shadow: 0px 1px 2px #d8d8d8;
+  margin: 10px;
+  background: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.item-container{
+  min-height: 90px;
+  padding: 0 25px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item-container:after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #f5f5f5;
+  margin-top: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 94%;
+  right: 0;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item-container-avatar{
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+.item-container-name{
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.item-container-name a{
+  text-decoration: none;
+  color: #000;
+}
+
+.item-button{
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: 1px solid #000 !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+}
+
+.list-pagination{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 25px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.list-pagination ul li button{
+  border: none;
+  background-color: transparent !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-pagination ul li button.Mui-selected{
+  border: 1px solid #000;
+}
+
+.user-page-inner{
+  padding: 15px;
+}
+
+.user-image .MuiAvatar-circle{
+  width: 100px;
+  height: 100px;
+  margin-left: 15px;
+}
+
+.user-name{
+  margin : 0;
+  font-size: 32px;
+}
+
+.user-location{
+  margin: 12px 0px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.user-from-date{
+  font-size: 14px;
+  color: #969696;
 }
