@@ -5,7 +5,6 @@ import {
 } from "../../actions/profiles";
 import axios from "axios";
 
-
 export default function* getProfiles() {
   try {
     const { data } = yield call(axios.get, "https://api.github.com/users");
